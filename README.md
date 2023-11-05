@@ -17,7 +17,8 @@ This is a series of five C++ modules to understand the specifities of the langua
 <br>
 <div align="center">
 
-![image](https://github.com/spookier/CPP/assets/77325667/c86ed8fb-aabb-43da-b75e-a09d2fc8ef61)
+![Screenshot from 2023-11-04 19-33-30](https://github.com/spookier/CPP/assets/77325667/b52b7d36-d076-4a4a-b488-d6ec1a7187ee)
+
 
 
 </div>
