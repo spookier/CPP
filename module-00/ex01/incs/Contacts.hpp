@@ -6,12 +6,20 @@
 
 class Contacts
 {
-public:
-    unsigned int 	ID;
-    std::string		name;
-    std::string 	number;
+    public:
+        void        fill_contact(std::string fields[5]);
+        std::string get_firstname();
+        std::string get_lastname();
+        std::string get_nickname();
+        std::string get_phone();
+        std::string get_secret();
 
-    Contacts(unsigned int _ID, std::string _name, std::string _number);
+    private:
+        std::string first_name;
+        std::string last_name;
+        std::string nickname;
+        std::string phone_number;
+        std::string secret;
 };
 
 #endif // CONTACTS_H

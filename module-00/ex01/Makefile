@@ -6,8 +6,8 @@ SRC = ./srcs/
 INCS_DIR = ./incs
 
 FILES =		$(SRC)main.cpp \
-			$(SRC)phonebook.cpp \
-			$(SRC)contacts.cpp \
+			$(SRC)Phonebook.cpp \
+			$(SRC)Contacts.cpp \
 
 OBJ_FILES = $(FILES:.cpp=.o)
 
