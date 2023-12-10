@@ -1,3 +1,5 @@
+**/.vscode/
+**/*.o
 *.o
 ex01-old
 .vscode

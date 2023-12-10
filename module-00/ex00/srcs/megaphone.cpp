@@ -1,10 +1,3 @@
-// $>./megaphone "shhhhh... I think the students are asleep..."
-// SHHHHH... I THINK THE STUDENTS ARE ASLEEP...
-// $>./megaphone Damnit " ! " "Sorry students, I thought this thing was off."
-// DAMNIT ! SORRY STUDENTS, I THOUGHT THIS THING WAS OFF.
-// $>./megaphone
-// * LOU
-
 #include <iostream>
 #include <string>
 
@@ -25,12 +18,11 @@ int main(int argc, char **argv)
     j = 1;
     while (j < argc)
     {
-
         str = argv[j];
         i = 0;
         while (argv[j][i])
         {
-            str[i] = toupper(argv[j][i]);
+            str[i] = std::toupper(argv[j][i]);
             i++;
         }
         std::cout << str + " ";
