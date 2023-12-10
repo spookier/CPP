@@ -7,7 +7,7 @@
 class Contacts
 {
     public:
-        void        fill_contact(std::string fields[5]);
+        void fill_contact(std::string fields[5]);
         std::string get_firstname();
         std::string get_lastname();
         std::string get_nickname();
