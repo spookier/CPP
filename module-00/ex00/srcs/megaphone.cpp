@@ -8,7 +8,7 @@ int main(int argc, char **argv)
     int i;
     int j;
 
-    if (argc == 1)
+    if (argc == 1 || (argc == 2 && argv[1][0] == '\0'))
     {
         std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
         return(0);
