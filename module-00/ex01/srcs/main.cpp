@@ -64,10 +64,15 @@ void show_contacts(PhoneBook &book)
 		return;
 	}
 
-	std::istringstream(response) >> tmp; // BASICALLY A C++ ATOI
-	if((tmp >= 0 && tmp <= 8) && book.get_increment() > tmp)
+	if(response.length() == 1 && response[0] >= 48 && response[0] <= 57)
 	{
-		print_user_info(book, tmp);
+		std::istringstream(response) >> tmp; 			// BASICALLY A C ATOI
+		if((tmp >= 0 && tmp <= 7) && book.get_increment() > tmp)
+		{
+			print_user_info(book, tmp);
+		}
+		else
+			std::cout << "[ERROR] User ID " << response << " doesn't exist.\n\n";
 	}
 	else
 		std::cout << "[ERROR] User ID " << response << " doesn't exist.\n\n";
@@ -97,7 +102,9 @@ int main(void)
 			if(book.add_contact(newContact) == -1)
 				return(0);
 
-			book.increment_contact_count();
+			if (book.get_increment() < 8)
+				book.increment_contact_count();
+			
 		}
 		else if(response == "SEARCH")
 		{
