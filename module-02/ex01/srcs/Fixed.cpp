@@ -1,5 +1,9 @@
 #include "FixedPoint.hpp"
 
+ // const at end of functions = promises it won't modify members variables
+ // when you see it = it tells you that using this function won't modify the object itself
+ // example: if a function just looks at the data but doesn't change it, it should be marked as const
+
 Fixed::Fixed()
 {
 	std::cout << "Default constructor called" << std::endl;
@@ -19,6 +23,12 @@ Fixed::Fixed(const int value)
 {
 	std::cout << "Int constructor called" << std::endl;
 	this->fixed_point_value = value << fractionalBits;
+}
+
+Fixed::Fixed(const float value)
+{
+	std::cout << "Float constructor called" << std::endl;
+	this->fixed_point_value = (int)roundf(value * (1 << this->fractionalBits));
 }
 
 
@@ -44,6 +54,23 @@ void Fixed::setRawBits(int const raw)
 	std::cout << "setRawBits member function called" << std::endl;
 	this->fixed_point_value = raw;
 }
+
+float	Fixed::toFloat(void) const
+{
+	return (((float)(this->fixed_point_value)) / (1 << this->fractionalBits));
+}
+
+int	Fixed::toInt(void) const
+{
+	return (this->fixed_point_value >> this->fractionalBits);
+}
+
+std::ostream	&operator<<(std::ostream &ostream, Fixed const &fixed)
+{
+	ostream << fixed.toFloat();
+	return (ostream);
+}
+
 
 Fixed::~Fixed()
 {
