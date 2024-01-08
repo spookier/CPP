@@ -2,6 +2,7 @@
 #define FIXED_H
 
 #include <iostream>
+#include <cmath>
 
 class Fixed
 {
@@ -11,13 +12,21 @@ class Fixed
 
 	public:
 		Fixed();
-		Fixed(const Fixed& other); 
 		Fixed(const int value);
+		Fixed(const float value);
+		Fixed(const Fixed& other);
 		Fixed& operator=(const Fixed& other); 
-		~Fixed(); // Destructor
+
+		float		toFloat(void) const;
+		int			toInt(void) const;
+
+		~Fixed();
 
 		int getRawBits() const;
 		void setRawBits(int const raw);
 };
+
+	std::ostream&	operator<<(std::ostream &ostream, Fixed const &fixed);
+
 
 #endif
