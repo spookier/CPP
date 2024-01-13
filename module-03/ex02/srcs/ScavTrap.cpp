@@ -49,15 +49,15 @@ void ScavTrap::attack(const std::string &target)
 {
 	if (this->_energyPoints <= 0)
 	{
-		std::cout << "[SCAVTRAP] " << this->_name << " impossible to attack, not enough energy points..." << std::endl;
+		std::cout << this->_name << " impossible to attack, not enough energy points..." << std::endl;
 	}
 	else if (this->_hitPoints <= 0)
 	{
-		std::cout << "[SCAVTRAP] " <<  this->_name << " impossible to attack, source is dead..." << std::endl;
+		std::cout << this->_name << " impossible to attack, source is dead..." << std::endl;
 	}
 	else
 	{
-		std::cout << "[SCAVTRAP] " << this->_name << " attacks " << target << 
+		std::cout << this->_name << " attacks " << target << 
 		" causing " << this->_attackDamage << " damage!" << std::endl;
 
 		this->_energyPoints--;

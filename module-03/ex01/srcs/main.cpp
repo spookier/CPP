@@ -1,4 +1,3 @@
-#include "../incs/ClapTrap.hpp"
 #include "../incs/ScavTrap.hpp"
 
 int main(void)
@@ -20,7 +19,7 @@ int main(void)
     i = 0;
     while(i <= 6)
     {
-        std::cout << "------------- TURN [" << i << "]-------------" << std::endl;
+        std::cout << "------------- TURN [" << i << "] -------------" << std::endl;
 
         alex_scav_obj.attack("EVE_scav");
         eve_scav_obj.takeDamage(20);
