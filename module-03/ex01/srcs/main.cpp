@@ -1,24 +1,61 @@
-#include "ClapTrap.hpp"
+#include "../incs/ClapTrap.hpp"
+#include "../incs/ScavTrap.hpp"
 
 int main(void)
 {
-    ClapTrap alex_obj = ClapTrap("alex");
-    ClapTrap eve_obj = ClapTrap("eve");
 
-    // Test until it has no more energy (energy limit for an obj is 10)
-    // alex_obj should run out of energy after attacking 10 times
-    // damage is 0, so its normal for eve to not die
+    ScavTrap alex_scav_obj      = ScavTrap("ALEX_scav");
+    ScavTrap eve_scav_obj       = ScavTrap("EVE_scav");
+
+
+    // ScavTrap STATS : Attack Damage = 20 | HP = 100 | Energy = 50
+
+    // To kill Eve, Alex should attack 5 times
+    // (5 times * 20dmg = 100 total damage, also equivalent to a scav's health)
+    // but since Eve gets repaired the 4th turn, she gains 20HP, so she can survive one more attack
+    // So in total, 6 attacks are needed to kill Eve
 
     int i;
 
     i = 0;
-    while (i < 10)
+    while(i <= 6)
     {
-        alex_obj.attack("eve");
-        eve_obj.takeDamage(1);
+        std::cout << "------------- TURN [" << i << "]-------------" << std::endl;
+
+        alex_scav_obj.attack("EVE_scav");
+        eve_scav_obj.takeDamage(20);
+
+        if(i == 2)
+            alex_scav_obj.guardGate(); 
+
+        if(i == 4)
+        {
+            alex_scav_obj.guardGate();      // Re-activate guard mode again for debug message
+            eve_scav_obj.beRepaired(20);    // Give Eve +20HP
+        }
+
+        std::cout << std::endl;
         i++;
-    }
+    }  
+
+    // // A different test, checks if they are able to attack when dead
     
-    return(0);
+    // std::cout << "------------- SECOND TEST ------------------" << std::endl;
+    // ScavTrap a          = ScavTrap("A");
+    // ScavTrap b          = ScavTrap("B");
+
+    // // Kill both
+    // a.takeDamage(1000);
+    // b.takeDamage(1000);
+    
+    // // A tries to attack B
+    // a.attack("B");
+    // b.takeDamage(20);
+
+    // // B tries to attack A
+    // b.attack("A");
+    // a.takeDamage(2003213421);
+
+    return (0);
 
 }
