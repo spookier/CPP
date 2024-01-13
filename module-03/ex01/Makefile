@@ -1,4 +1,4 @@
-NAME = claptrap
+NAME = scavtrap
 CC = c++
 CFLAGS = -std=c++98 -Wall -Werror -Wextra
 
@@ -7,6 +7,7 @@ INCS_DIR = ./incs
 
 FILES =		$(SRC)main.cpp \
 			$(SRC)ClapTrap.cpp \
+			$(SRC)ScavTrap.cpp \
 
 OBJ_FILES = $(FILES:.cpp=.o)
 
