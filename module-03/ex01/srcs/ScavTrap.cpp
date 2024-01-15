@@ -1,5 +1,4 @@
 #include "../incs/ScavTrap.hpp"
-#include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap()
 {
@@ -24,7 +23,7 @@ ScavTrap::ScavTrap(std::string name)
 
 ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
 {
-	*this = other;
+	*this = other; 							
 
 	std::cout << "ScavTrap Copy constructor called" << std::endl;
 }
@@ -63,7 +62,6 @@ void ScavTrap::attack(const std::string &target)
 		this->_energyPoints--;
 	}
 }
-
 
 void ScavTrap::guardGate(void)
 {

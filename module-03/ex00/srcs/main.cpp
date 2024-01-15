@@ -12,10 +12,10 @@ int main(void)
     int i;
 
     i = 0;
-    while (i < 10)
+    while (i < 20)
     {
         alex_obj.attack("eve");
-        eve_obj.takeDamage(1);
+        eve_obj.takeDamage(alex_obj.getDamage());
         i++;
     }
     

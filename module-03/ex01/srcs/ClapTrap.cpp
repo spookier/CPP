@@ -99,7 +99,11 @@ void ClapTrap::beRepaired(unsigned int amount)
 	{
 		std::cout << " Impossible to repair, not enough energy points..." << std::endl;
 	}
+}
 
+int ClapTrap::getDamage()
+{
+	return(this->_attackDamage);
 }
 
 ClapTrap::~ClapTrap()

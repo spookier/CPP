@@ -1,6 +1,5 @@
 #include "../incs/FragTrap.hpp"
 
-
 int main(void)
 {
     FragTrap alex_Frag_obj      = FragTrap("ALEX_Frag");
@@ -37,12 +36,12 @@ int main(void)
         if (i % 2 == 0)
         {
             alex_Frag_obj.attack("EVE_Frag");
-            eve_Frag_obj.takeDamage(30);
+            eve_Frag_obj.takeDamage(alex_Frag_obj.getDamage());
         }
         else
         {
             eve_Frag_obj.attack("ALEX_Frag");
-            alex_Frag_obj.takeDamage(30);
+            alex_Frag_obj.takeDamage(eve_Frag_obj.getDamage());
         }
 
         if (i % 3 == 0)
@@ -53,7 +52,7 @@ int main(void)
         {
             eve_Frag_obj.highFivesGuys();
         }
-        
+
         std::cout << std::endl;
         i++;
     }

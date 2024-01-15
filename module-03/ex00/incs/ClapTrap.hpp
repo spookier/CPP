@@ -23,6 +23,8 @@ class ClapTrap
  		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
 
+		int getDamage();
+
 		~ClapTrap();
 };
 
