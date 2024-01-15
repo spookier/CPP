@@ -22,7 +22,7 @@ int main(void)
         std::cout << "------------- TURN [" << i << "] -------------" << std::endl;
 
         alex_scav_obj.attack("EVE_scav");
-        eve_scav_obj.takeDamage(20);
+        eve_scav_obj.takeDamage(alex_scav_obj.getDamage());
 
         if(i == 2)
             alex_scav_obj.guardGate(); 
@@ -37,8 +37,10 @@ int main(void)
         i++;
     }  
 
-    // // A different test, checks if they are able to attack when dead
-    
+    // A different test, checks if they are able to attack when dead    
+    // int i;
+
+    // i = 0;
     // std::cout << "------------- SECOND TEST ------------------" << std::endl;
     // ScavTrap a          = ScavTrap("A");
     // ScavTrap b          = ScavTrap("B");

@@ -22,14 +22,12 @@ ClapTrap::ClapTrap(std::string name)
 	std::cout << this->_name << " (non-default) constructor called " << std::endl;
 }
 
-
 ClapTrap::ClapTrap(const ClapTrap &other)
 {
 	*this = other;
 
 	std::cout << "Copy constructor called" << std::endl;
 }
-
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& claptrap)
 {
@@ -45,7 +43,6 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& claptrap)
 
 	return (*this);
 }
-
 
 void ClapTrap::attack(const std::string &target)
 {
@@ -95,10 +92,12 @@ void ClapTrap::beRepaired(unsigned int amount)
 		this->_hitPoints += amount;
 	}
 	else
-	{
 		std::cout << "Impossible to repair, not enough energy points..." << std::endl;
-	}
+}
 
+int ClapTrap::getDamage()
+{
+	return(this->_attackDamage);
 }
 
 ClapTrap::~ClapTrap()

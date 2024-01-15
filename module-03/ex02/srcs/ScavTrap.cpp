@@ -64,7 +64,6 @@ void ScavTrap::attack(const std::string &target)
 	}
 }
 
-
 void ScavTrap::guardGate(void)
 {
 	if (this->_gate_keeper_mode == false)
