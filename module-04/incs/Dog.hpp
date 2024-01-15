@@ -9,9 +9,11 @@ class Dog : public Animal
         Dog();
         Dog(const Dog &other);
         Dog &operator=(const Dog &other);
-        ~Dog() override;
+        ~Dog(); //override
 
-        void makeSound(void) const override;
+        void makeSound(void) const; //override
+        std::string getType(void) const;
+
 };
 
 #endif

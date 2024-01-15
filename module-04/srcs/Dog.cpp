@@ -31,7 +31,12 @@ void Dog::makeSound(void) const
     std::cout << "Woof Woof !" << std::endl;
 }
 
+std::string Dog::getType(void) const
+{
+    return (this->_type);
+}
+
 Dog::~Dog()
 {
-    std::cout << " Destructor called" << std::endl;
+    std::cout << "> [DOG] Destructor called" << std::endl;
 }
