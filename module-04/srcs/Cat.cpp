@@ -1,4 +1,4 @@
-#include "Cat.hpp"
+#include "../incs/Cat.hpp"
 
 Cat::Cat()
 {
@@ -31,7 +31,13 @@ void Cat::makeSound(void) const
     std::cout << "Meooooowww !" << std::endl;
 }
 
+std::string Cat::getType(void) const
+{
+    return (this->_type);
+}
+
+
 Cat::~Cat()
 {
-    std::cout << " Destructor called" << std::endl;
+    std::cout << "> [CAT] Destructor called" << std::endl;
 }

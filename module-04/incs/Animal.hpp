@@ -16,6 +16,7 @@ class Animal
         virtual ~Animal();
 
         virtual void makeSound(void) const;
+        virtual std::string getType(void) const;
 };
 
 #endif

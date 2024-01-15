@@ -2,9 +2,9 @@
 
 Animal::Animal()
 {
-    this->_type = "[BASE-CLASS]";
+    this->_type = "BASE";
 
-    std::cout << this->_type << " Constructor called" << std::endl;
+    std::cout << "[BASE] Constructor called" << std::endl;
 }
 
 Animal::Animal(const Animal &other) 
@@ -31,8 +31,12 @@ void Animal::makeSound(void) const
     std::cout << "..." << std::endl;
 }
 
+std::string Animal::getType(void) const
+{
+    return (this->_type);
+}
 
 Animal::~Animal()
 {
-    std::cout << this->_type << " Destructor called" << std::endl;
+    std::cout << "[BASE] Destructor called" << std::endl;
 }
