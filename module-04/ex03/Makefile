@@ -1,4 +1,4 @@
-NAME = poly02
+NAME = materias
 CC = c++
 CFLAGS = -std=c++98 -Wall -Werror -Wextra
 
@@ -6,12 +6,12 @@ SRC = ./srcs/
 INCS_DIR = ./incs
 
 FILES =		$(SRC)main.cpp \
-			$(SRC)AAnimal.cpp \
-			$(SRC)Cat.cpp \
-			$(SRC)Dog.cpp \
-			$(SRC)WrongAnimal.cpp \
-			$(SRC)WrongCat.cpp \
-			$(SRC)Brain.cpp \
+			$(SRC)AMateria.cpp \
+			$(SRC)Ice.cpp \
+			$(SRC)Cure.cpp \
+			$(SRC)Character.cpp \
+			$(SRC)MateriaSource.cpp \
+			
 			
 
 OBJ_FILES = $(FILES:.cpp=.o)
