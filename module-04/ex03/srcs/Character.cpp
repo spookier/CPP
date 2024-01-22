@@ -57,6 +57,7 @@ void Character::unequip(int idx)
     if (this->_materias[idx] != NULL)
     {
         std::cout << "Un-equiping: " << this->_materias[idx]->getType() << std::endl;
+        delete this->_materias[idx]; 
         this->_materias[idx] = NULL;
     }
 }
@@ -68,11 +69,23 @@ std::string const &Character::getName() const
 
 void Character::use(int idx, ICharacter &target)
 {
-    if(idx >= 0 && idx <= 3)
+    if ( (idx >= 0 && idx < 4 ) && this->_materias[idx] != NULL)
+    {
         this->_materias[idx]->use(target);
+    }
     else
-        std::cout << "[X] Invalid itx" << std::endl;
+        std::cout << "[X] No Materia equipped in slot " << idx << std::endl;
+
 }
+
+
+// void Character::use(int idx, ICharacter &target)
+// {
+//     if (idx >= 0 && idx < 4)
+//         this->_materias[idx]->use(target);
+//     else
+//         std::cout << "[X] Invalid itx" << std::endl;
+// }
 
 Character::~Character()
 {
