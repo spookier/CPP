@@ -6,7 +6,7 @@
 int main()
 {
     std::cout << "--- CONSTRUCTORS INIT ---" << std::endl;
-    const Animal*       meta = new Animal();
+    const Animal*    meta = new Animal();
     const Animal*       j = new Dog();
     const Animal*       i = new Cat();
     std::cout << "-------------------------" << std::endl;
@@ -62,7 +62,7 @@ int main()
 //     return(0);
 // }
 
-// // * TEST 3 -- WRONG ANIMAL NOISES BUT BETTER TO SEE THE DIFFERENCE
+// // * TEST 3 -- WRONG ANIMAL NOISES + GOOD ANIMAL DOG
 // int main()
 // {
 //     std::cout << "--- CONSTRUCTORS INIT ---" << std::endl;
