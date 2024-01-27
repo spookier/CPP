@@ -15,7 +15,7 @@ class WrongAnimal
         WrongAnimal &operator=(const WrongAnimal &other);
         virtual ~WrongAnimal();
 
-        void    makeSound(void) const;     // only removed virtual here
+        void makeSound(void) const;     // only thing diff from Animal is removing virtual here
         virtual std::string getType(void) const; 
 };
 
