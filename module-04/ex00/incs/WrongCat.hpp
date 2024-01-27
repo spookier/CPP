@@ -9,9 +9,9 @@ class WrongCat : public WrongAnimal
         WrongCat();
         WrongCat(const WrongCat &other);
         WrongCat &operator=(const WrongCat &other);
-        ~WrongCat(); //override
+        ~WrongCat();                // override
 
-        void makeSound(void) const; //override
+        void makeSound(void) const; // override
         std::string getType(void) const;
 };
 
