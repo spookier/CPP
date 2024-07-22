@@ -21,6 +21,6 @@ private:
     std::string _target;
 };
 
-std::ostream& operator<<(std::ostream& ostream, const ShrubberyCreationForm& shrubberyCreationForm);
+std::ostream &operator<<(std::ostream& ostream, const ShrubberyCreationForm& shrubberyCreationForm);
 
 #endif
