@@ -85,7 +85,7 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 	{
 		FILE << treeAscii;
 		FILE.close();
-		std:: cout << "Tree has been written to file.";
+		std:: cout << "Tree has been written to file." << std::endl;
 	}
 	else
 	{

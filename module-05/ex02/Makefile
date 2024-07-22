@@ -9,6 +9,7 @@ FILES =		$(SRC)main.cpp \
 			$(SRC)Bureaucrat.cpp \
 			$(SRC)AForm.cpp \
 			$(SRC)ShrubberyCreationForm.cpp \
+			$(SRC)RobotomyRequestForm.cpp \
 
 
 OBJ_FILES = $(FILES:.cpp=.o)
