@@ -1,6 +1,7 @@
 #include "../incs/Bureaucrat.hpp"
 #include "../incs/ShrubberyCreationForm.hpp"
 #include "../incs/RobotomyRequestForm.hpp"
+#include "../incs/PresidentialPardonForm.hpp"
 #include <iostream>
 
 int main()
@@ -12,21 +13,20 @@ int main()
 		Bureaucrat midRank("Manager", 50);
 		Bureaucrat highRank("CEO", 1);
 
-
-		// ------------------------------------------------------
-
-		std::cout << "\n--- Testing ShrubberyCreationForm ---\n";
-		ShrubberyCreationForm shrubForm("home");
-		std::cout << shrubForm << std::endl;
+		// -------------------------- 1 ---------------------------
+		
+		// std::cout << "\n--- Testing ShrubberyCreationForm ---\n";
+		// ShrubberyCreationForm shrubForm("home");
+		// std::cout << shrubForm << std::endl;
 
 		
-		lowRank.signForm(shrubForm); // Should fail (grade too low)
-		midRank.signForm(shrubForm); // Should succeed
+		// lowRank.signForm(shrubForm); // Should fail (grade too low)
+		// midRank.signForm(shrubForm); // Should succeed
 
-		lowRank.executeForm(shrubForm); // Should fail (grade too low)
-		midRank.executeForm(shrubForm); // Should succeed (create _shrubbery file)
+		// lowRank.executeForm(shrubForm); // Should fail (grade too low)
+		// midRank.executeForm(shrubForm); // Should succeed (create _shrubbery file)
 
-		// ------------------------------------------------------
+		// -------------------------- 2 ---------------------------
 
 		// std::cout << "\n--- Testing RobotomyRequestForm ---\n";
 		// RobotomyRequestForm robotForm("Bender");
@@ -38,21 +38,18 @@ int main()
 		// midRank.executeForm(robotForm);	 // Should fail (grade too low)
 		// highRank.executeForm(robotForm); // Should succeed (50% chance of robotomization)
 
-		// ------------------------------------------------------
+		// -------------------------- 3 ---------------------------
 
-		// std::cout << "\n--- Testing PresidentialPardonForm ---\n";
-		// PresidentialPardonForm pardonForm("Zaphod");
-		// std::cout << pardonForm << std::endl;
+		std::cout << "\n--- Testing PresidentialPardonForm ---\n";
+		PresidentialPardonForm pardonForm("LOUIS");
+		std::cout << pardonForm << std::endl;
 
-		// midRank.signForm(pardonForm);  // Should fail (grade too low)
-		// highRank.signForm(pardonForm); // Should succeed
+		midRank.signForm(pardonForm);  // Should fail (grade too low)
+		highRank.signForm(pardonForm); // Should succeed
 
-		// midRank.executeForm(pardonForm);  // Should fail (grade too low)
-		// highRank.executeForm(pardonForm); // Should succeed (pardon Zaphod)
+		midRank.executeForm(pardonForm);  // Should fail (grade too low)
+		highRank.executeForm(pardonForm); // Should succeed 
 
-		// std::cout << "\n--- Testing execution of unsigned form ---\n";
-		// ShrubberyCreationForm unsignedForm("park");
-		// highRank.executeForm(unsignedForm); // Should fail (form not signed)
 	}
 	catch (std::exception &e)
 	{

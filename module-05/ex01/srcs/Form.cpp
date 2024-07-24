@@ -21,7 +21,7 @@ Form::Form(const Form &other)
 
 }
 
-Form &Form::operator=(const Form& other)
+Form &Form::operator=(const Form &other)
 {
 	if (this != &other)
 	{
