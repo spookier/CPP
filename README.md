@@ -9,7 +9,7 @@ This is a series of five C++ modules to understand the specifities of the langua
 - Module 02 - Ad-hoc polymorphism, overloads and orthodox canonical classes
 - Module 03 - Inheritance
 - Module 04 - Subtype polymorphism, abstract classes and interfaces
-
+- Module 05 - Try/Catch and Exceptions in CPP
 <br>
 
 ---
