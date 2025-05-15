@@ -12,7 +12,6 @@
 class ParseInput
 {
 	private:
-		//std::map<std::string, float> parse_map;
 		std::string	date_for_btc;
 		float		value_for_btc;
 
