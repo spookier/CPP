@@ -1,6 +1,34 @@
-#include "RPN.hpp"
+#include "Rpn.hpp"
 
-int RPN::evaluate(const std::string &rpnArg)
+Rpn::Rpn()
+{
+}
+
+Rpn::Rpn(const Rpn &other)
+{
+	*this = other;
+}
+
+
+Rpn &Rpn::operator=(const Rpn &other)
+{
+	if (this == &other)
+		return (*this);
+	this->numbers = other.getStack();
+	return (*this);
+}
+
+
+Rpn::~Rpn()
+{
+}
+
+std::stack<int> Rpn::getStack() const
+{
+    return (this->numbers);
+}
+
+int Rpn::evaluate(const std::string &rpnArg)
 {
 	std::istringstream 	input(rpnArg);
 	std::string 		token;

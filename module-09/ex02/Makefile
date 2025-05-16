@@ -1,4 +1,4 @@
-NAME = ex02
+NAME = PmergeMe
 CC = c++
 CFLAGS = -std=c++98 -Wall -Werror -Wextra
 
@@ -6,6 +6,7 @@ SRC = ./srcs/
 INCS_DIR = ./incs
 
 FILES =		$(SRC)main.cpp \
+			$(SRC)PmergeMe.cpp \
 
 
 OBJ_FILES = $(FILES:.cpp=.o)

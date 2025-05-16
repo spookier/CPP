@@ -1,5 +1,5 @@
-#ifndef RPN_HPP
-#define RPN_HPP
+#ifndef Rpn_HPP
+#define Rpn_HPP
 
 #include <sstream>
 #include <stdexcept>
@@ -9,12 +9,19 @@
 #include <iostream>
 
 
-class RPN
+class Rpn
 {
 	private:
 		std::stack<int>	numbers;
 
 	public:
+		Rpn();
+		Rpn(const Rpn &other);
+		Rpn &operator=(const Rpn &other);
+		~Rpn();
+		
+		std::stack<int> getStack() const;
+
 		int evaluate(const std::string &rpnArg);
 };
 

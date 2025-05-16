@@ -6,6 +6,31 @@ BitcoinExchange::BitcoinExchange(const std::string &filename)
 }
 
 
+BitcoinExchange::BitcoinExchange(const BitcoinExchange &other)
+{
+	*this = other;
+}
+
+BitcoinExchange &BitcoinExchange::operator=(const BitcoinExchange &other)
+{
+	if (this == &other)
+	{
+		return (*this);
+	}
+
+	this->btc_database = other.getMap();
+	return (*this);
+}
+
+BitcoinExchange::~BitcoinExchange()
+{
+}
+
+std::map<std::string, float>BitcoinExchange::getMap() const
+{
+	return(this->btc_database);
+}
+
 void BitcoinExchange::loadDatabase(const std::string &filename)
 {
 	std::ifstream   file;
