@@ -6,7 +6,7 @@ SRC = ./srcs/
 INCS_DIR = ./incs
 
 FILES =		$(SRC)main.cpp \
-			$(SRC)RPN.cpp 
+			$(SRC)Rpn.cpp 
 
 
 OBJ_FILES = $(FILES:.cpp=.o)

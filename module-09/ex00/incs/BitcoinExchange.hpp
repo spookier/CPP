@@ -14,12 +14,15 @@ class BitcoinExchange
 		std::map<std::string, float> btc_database;
 		
 		BitcoinExchange();
-		BitcoinExchange(const BitcoinExchange &other);
-		BitcoinExchange &operator=(const BitcoinExchange &other);
-
+		
 	
 	public:
 		BitcoinExchange(const std::string &filename);
+		BitcoinExchange(const BitcoinExchange &other);
+		BitcoinExchange &operator=(const BitcoinExchange &other);
+		~BitcoinExchange();
+
+		std::map<std::string,float> getMap() const;
 
 		void loadDatabase(const std::string &filename);
 		float getExchangeRate(const std::string &date) const;

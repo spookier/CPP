@@ -1,4 +1,4 @@
-#include "RPN.hpp"
+#include "Rpn.hpp"
 
 int main(int argc, char **argv)
 {
@@ -11,10 +11,9 @@ int main(int argc, char **argv)
 		return (1);
 	}
 
-
 	try
 	{
-		RPN rpn;
+		Rpn rpn;
 		expression = argv[1];
 		answer = rpn.evaluate(expression);
 		std::cout << answer << std::endl;
